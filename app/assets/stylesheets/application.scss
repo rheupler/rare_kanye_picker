@@ -18,5 +18,13 @@ body {
   background-color: #232928;
   color: white;
   font-family: 'Press Start 2P', cursive;
-  text-align: center;
+  /*text-align: center;*/
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+.leaderboard {
+  // width: 20%;
 }

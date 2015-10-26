@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   def index
     @game = Game.new
+    @games = Game.all
   end
 
   # def new
@@ -8,7 +9,7 @@ class GamesController < ApplicationController
   # end
 
   def create
-    @game = Game.new(:player => :nil)
+    @game = Game.new(:player => "AAA")
     if @game.save
       redirect_to game_path(@game)
     else

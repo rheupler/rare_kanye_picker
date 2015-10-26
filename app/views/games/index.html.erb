@@ -1,5 +1,37 @@
-<h1>HELLO</h1>
+<center>
+<h1>PEPE PICKER</h1>
 
 <%= form_for @game do |f| %>
 <button type="submit">New Game</button>
 <% end %>
+
+<h1>LEADERBOARD</h1>
+<!-- <div class="leaderboard">
+  <ul>
+    <li>Name</li>
+    <li>Turns</li>
+  </ul>
+  <ol><% @games.each do |game| %>
+    <% if game.score >= 100 %>
+    <li><%= game.player %> <%= game.turns %></li>
+  <% end %>
+  <% end %>
+  </ol>
+
+</div> -->
+
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Turns</th>
+  </tr>
+  <% @games.each do |game| %>
+  <% if game.score >= 100 %>
+  <tr>
+    <td><%= game.player %></td>
+    <td><%= game.turns %></td>
+  </tr>
+  <% end %>
+    <% end %>
+</table>
