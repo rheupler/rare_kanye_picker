@@ -32,19 +32,33 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    score = params[:score].to_i
-    new_score = @game.score += score
-    @game.update(score: new_score)
-    if @game.save
-      redirect_to game_path(@game)
-    # else
-    #   flash[:alert] = "error"
-    #   redirect game_path(@game)
+    if params[:turn] && params[:score]
+      turn = params[:turn].to_i
+      score = params[:score].to_i
+      new_turn = @game.turns += turn
+      new_score = @game.score += score
+      @game.update(score: new_score, turns: new_turn)
+      if @game.save
+        sleep 2
+        redirect_to game_path(@game)
+      else
+        flash[:alert] = "error"
+        redirect game_path(@game)
+      end
+    else
+      player = params[:game][:player]
+      @game.update(player: player)
+      if @game.save
+        redirect_to root_path
+      else
+        flash[:alert] = "error"
+        redirect game_path(@game)
+      end
     end
   end
 
   # private
   # def game_params
-  #   params.require(:game).permit(:player =>)
+  #   params.require(:game).permit(:player)
   # end
 end

@@ -26,7 +26,11 @@ img {
 }
 
 .leaderboard {
-  // width: 20%;
+  font-size: 2em;
+}
+
+td {
+  text-align: center;
 }
 
 .imgOverlay1 {
@@ -64,6 +68,15 @@ img {
   margin-right: 0px;
   margin-left: 5px;
   margin-top: 5px;
+  display: inline-block;
+}
+
+.score1, .score2, .imagesShow {
+  display: inline-block;
+}
+
+.not-clickable {
+  pointer-events: none;
   display: inline-block;
 }
 

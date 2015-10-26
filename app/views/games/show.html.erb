@@ -1,26 +1,53 @@
-<center>
-<h1>new game starts</h1>
+<div class="cheatsheet">
 
-  <style media="screen">
-    .imgOverlay1 {
-      background: url("/assets/Pepe/pepe<%= @image1.id %>.jpg") no-repeat; }
-  </style>
+</div>
 
-  <style media="screen">
-    .imgOverlay2 {
-      background: url("/assets/Pepe/pepe<%= @image2.id %>.jpg") no-repeat; }
-  </style>
+<% if @game.turns >= 20 %>
+  <div "gameover">
+  <h1>Game over</h1>
+  <h2>Your Score: <%= @game.score %></h2>
+  <%= render 'form' %>
+  </div>
 
-<%= link_to game_path(@game, score: @image1.value), {method: :patch} do %>
-  <div class='imgOverlay1'>
-    <img src="/assets/black/<%= rand(9) %>.png">
+<% else %>
+  <center>
+  <div class="gameplay">
+  <h1>Uncover the rarest Pepe</h1>
+
+    <style media="screen">
+      .imgOverlay1 {
+        background: url("/assets/Pepe/pepe<%= @image1.id %>.jpg") no-repeat; }
+    </style>
+
+    <style media="screen">
+      .imgOverlay2 {
+        background: url("/assets/Pepe/pepe<%= @image2.id %>.jpg") no-repeat; }
+    </style>
+
+  <div class='score1'>
+    <h2><%= @image1.value %></h2>
+  </div>
+
+
+  <%= link_to game_path(@game, score: @image1.value, turn: 1), {method: :patch} do %>
+  <div class='imagesShow'>
+    <div class='imgOverlay1'>
+      <img id="black1" src="/assets/black/<%= rand(9) %>.png">
+    </div>
+    <% end %>
+
+  <%= link_to game_path(@game, score: @image2.value, turn: 1), {method: :patch} do %>
+    <div class='imgOverlay2'>
+      <img id='black2' src="/assets/black/<%= rand(9) %>.png">
+    </div>
   </div>
   <% end %>
 
-<%= link_to game_path(@game, score: @image2.value), {method: :patch} do %>
-  <div class='imgOverlay2'>
-    <img src="/assets/black/<%= rand(9) %>.png">
+  <div class='score2'>
+    <h2><%= @image2.value %></h2>
   </div>
-<% end %>
 
-<h1>Your Score: <%= @game.score %></h1>
+
+  <h1>Score: <%= @game.score %></h1>
+  <h1>Turn: <%= @game.turns + 1 %></h1>
+<% end %>
