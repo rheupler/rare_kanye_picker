@@ -1,1 +1,26 @@
+<center>
 <h1>new game starts</h1>
+
+  <style media="screen">
+    .imgOverlay1 {
+      background: url("/assets/Pepe/pepe<%= @image1.id %>.jpg") no-repeat; }
+  </style>
+
+  <style media="screen">
+    .imgOverlay2 {
+      background: url("/assets/Pepe/pepe<%= @image2.id %>.jpg") no-repeat; }
+  </style>
+
+<%= link_to game_path(@game, score: @image1.value), {method: :patch} do %>
+  <div class='imgOverlay1'>
+    <img src="/assets/black/<%= rand(9) %>.png">
+  </div>
+  <% end %>
+
+<%= link_to game_path(@game, score: @image2.value), {method: :patch} do %>
+  <div class='imgOverlay2'>
+    <img src="/assets/black/<%= rand(9) %>.png">
+  </div>
+<% end %>
+
+<h1>Your Score: <%= @game.score %></h1>
