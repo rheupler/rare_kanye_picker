@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #232928;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
