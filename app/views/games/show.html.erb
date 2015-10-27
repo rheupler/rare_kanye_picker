@@ -54,7 +54,7 @@
 
 <br>
   <% if @image1.value >= 10 || @image2.value >= 10 %>
-  <div id="blink"><span><h1>Rare Pepe detected!</h1></span></div>
+  <div id="blink"><span><h1>Ultra rare Pepe detected!</h1></span></div>
   <% end %>
 <% end %>
 
@@ -63,7 +63,7 @@
 <h2>Collection:</h2>
 <% @game.images.each do |image| %>
 <div class="image-card">
-  <img src="/public/Pepe/pepe<%= image.id %>.jpg">
+  <img src="/images/Pepe/pepe<%= image.id %>.jpg">
 </div>
 <% end %>
 <% end %>
