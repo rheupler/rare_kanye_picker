@@ -21,6 +21,11 @@ body {
   /*text-align: center;*/
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 img {
   image-rendering: pixelated;
 }
@@ -29,8 +34,10 @@ img {
   font-size: 2em;
 }
 
-td {
+table, th, td {
   text-align: center;
+  border: 2px solid white;
+  padding: 10px;
 }
 
 .imgOverlay1 {
@@ -86,10 +93,57 @@ td {
 
 #welcome {
   color: #00FF00;
+  font-size: 4em;
 }
 
-button {
-  
+.image-card {
+  display: inline-block;
 }
 
-// .imgOverlay:hover { background: url(<%= @image1 %>.jpg) no-repeat; }
+button.big {
+  background-color: #232928;
+  border: 3px solid white;
+  padding: 15px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  box-shadow: 5px 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+button.big:active {
+  box-shadow: 0px 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+button.small {
+  background-color: #232928;
+  border: 2px solid white;
+  padding: 10px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5em;
+  box-shadow: 3px 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+button.big:active {
+  box-shadow: 0px 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+button:selection {
+  border: none;
+}
+
+.buttons {
+  margin: 40px;
+}

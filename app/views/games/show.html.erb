@@ -1,18 +1,17 @@
-<div class="cheatsheet">
-
+<center>
+<div class="buttons">
+  <button class="small">INSTRUCTIONS</button>
+  <button class="small">PEPE GUIDE</button>
 </div>
-
-<% if @game.turns >= 20 %>
-  <div "gameover">
-  <h1>Game over</h1>
-  <h2>Your Score: <%= @game.score %></h2>
-  <%= render 'form' %>
-  </div>
-
+  <% if @game.turns >= 20 %>
+    <div "gameover">
+    <h1>Game over</h1>
+    <h2>Your Score: <%= @game.score %></h2>
+    <%= render 'form' %>
+    </div>
 <% else %>
-  <center>
   <div class="gameplay">
-  <h1>Uncover the rarest Pepe</h1>
+  <h1>UNCOVER THE RAREST PEPE</h1>
 
     <style media="screen">
       .imgOverlay1 {
@@ -27,7 +26,6 @@
   <div class='score1'>
     <h2><%= @image1.value %></h2>
   </div>
-
 
   <%= link_to game_path(@game, score: @image1.value, turn: 1), {method: :patch} do %>
   <div class='imagesShow'>

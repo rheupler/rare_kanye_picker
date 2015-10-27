@@ -36,7 +36,3 @@ $(document).ready(function() {
         f.style.display = (f.style.display == 'none' ? '' : 'none');
     }, 500);
 });
-//
-// $('.imagesShow').click(function() {
-//   $(this).removeClass('imagesShow').addClass('not-clickable');
-// });
