@@ -15,12 +15,12 @@
 
     <style media="screen">
       .imgOverlay1 {
-        background: url("/assets/Pepe/pepe<%= @image1.id %>.jpg") no-repeat; }
+        background: url("/images/Pepe/pepe<%= @image1.id %>.jpg") no-repeat; }
     </style>
 
     <style media="screen">
       .imgOverlay2 {
-        background: url("/assets/Pepe/pepe<%= @image2.id %>.jpg") no-repeat; }
+        background: url("/images/Pepe/pepe<%= @image2.id %>.jpg") no-repeat; }
     </style>
 
 <div id="picture-holder">
@@ -32,13 +32,13 @@
   <%= link_to game_path(@game, image_id: @image1.id, score: @image1.value, turn: 1), {method: :patch} do %>
   <div class='imagesShow'>
     <div class='imgOverlay1'>
-      <img id="black1" src="/assets/black/<%= rand(12) %>.png">
+      <img id="black1" src="/images/black/<%= rand(12) %>.png">
     </div>
     <% end %>
 
   <%= link_to game_path(@game, image_id: @image2.id, score: @image2.value, turn: 1), {method: :patch} do %>
     <div class='imgOverlay2'>
-      <img id='black2' src="/assets/black/<%= rand(12) %>.png">
+      <img id='black2' src="/images/black/<%= rand(12) %>.png">
     </div>
   </div>
   <% end %>
