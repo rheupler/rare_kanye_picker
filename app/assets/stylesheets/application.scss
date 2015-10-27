@@ -91,11 +91,14 @@ table, th, td {
 
 .score1, .score2, .imagesShow {
   display: inline-block;
+  padding: 20px;
+
 }
 
 .not-clickable {
   pointer-events: none;
   display: inline-block;
+  padding: 20px;
 }
 
 #blink {
@@ -119,6 +122,9 @@ display:block;
 
 .image-card {
   display: inline-block;
+  border: 2px solid white;
+  padding: 5px;
+  margin: 5px;
 }
 
 .leaderboard-container {
@@ -215,9 +221,15 @@ input {
 .ranking5 {
   color: #FE2EF7;
 }
+
 .new-game-button {
   padding: 30px;
 }
+
+#picture-holder {
+  margin: 50px;
+}
+
 .playerScore {
   color: red;
 }
@@ -242,4 +254,16 @@ input {
 
 #myModalLabel {
   color: black;
+}
+
+.opaque {
+  opacity: 0;
+}
+
+.game-over {
+  font-size: 5em;
+}
+
+.gameover {
+  padding: 30px;
 }

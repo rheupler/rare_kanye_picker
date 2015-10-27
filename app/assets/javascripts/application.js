@@ -34,8 +34,8 @@ $(function() {
   $(".score2").hide();
 
   $(".imagesShow").click(function(event) {
-    $("#black1").fadeOut();
-    $("#black2").fadeOut();
+    $("#black1").toggleClass('opaque');
+    $("#black2").toggleClass('opaque');
     $(".score1").fadeIn();
     $(".score2").fadeIn();
     $(this).removeClass('imagesShow').addClass('not-clickable');
