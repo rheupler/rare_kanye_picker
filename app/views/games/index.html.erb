@@ -1,9 +1,11 @@
 <center>
 <h1 id='welcome'>PEPE<img src="/assets/pixelpepe.png" class="pepe-logo">PICKER</h1>
 
-<%= form_for @game do |f| %>
-<button type="submit" class="big">NEW GAME</button>
-<% end %>
+<div class="new-game-button">
+  <%= form_for @game do |f| %>
+  <button type="submit" class="big">NEW GAME</button>
+  <% end %>
+</div>
 
 <div class="leaderboard-container">
   <!-- <h1>LEADERBOARD</h1> -->
@@ -14,7 +16,7 @@
       <th class="playerScore">SCORE</th>
     </tr>
     <% @games.each do |game| %>
-    <% if game.turns >= 20 %>
+    <% if game.turns >= 20 && @counter <= 5 %>
     <tr>
       <td class="ranking<%= @counter %>"><%= @counter %></td>
       <td class="ranking<%= @counter %>"><%= game.player %></td>

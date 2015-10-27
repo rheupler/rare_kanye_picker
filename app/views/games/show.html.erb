@@ -46,12 +46,12 @@
   </div>
 
 
-  <h1>SCORE: <%= @game.score %></h1>
-  <h1>TURN: <%= @game.turns + 1 %>/20</h1>
+  <h2>Score: <%= @game.score %></h2>
+  <h2>Turn: <%= @game.turns + 1 %>/20</h2>
 
 <br>
   <% if @image1.value >= 10 || @image2.value >= 10 %>
-  <h1 id="rare">Rare Pepe Detected!</h1>
+  <div id="blink"><span><h1>Rare Pepe detected!</h1></span></div>
   <% end %>
 <% end %>
 
@@ -83,7 +83,6 @@
         rare it is.</h4><br><br>
         <h4>Hint: You can see the full list of Pepe's with their value by clicking on the Pepe Guide button on the top
         right of this page.</h4>
-        <h4>NOTE: You will only be able to click the button FIVE times before it disappears, so use it wisely!</h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -97,8 +96,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">You'll only be able to see this once. Take it all in. Click the button at the bottom
-        when you're ready to play.</h4>
+        <h4 class="modal-title" id="myModalLabel">Your own personal Pepe Guide.</h4>
       </div>
       <div class="modal-body">
         <% @images.each do |image| %>

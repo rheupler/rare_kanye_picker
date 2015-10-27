@@ -32,9 +32,7 @@
 $(function() {
   $(".score1").hide();
   $(".score2").hide();
-// });
 
-// $(function() {
   $(".imagesShow").click(function(event) {
     $("#black1").fadeOut();
     $("#black2").fadeOut();
@@ -42,14 +40,22 @@ $(function() {
     $(".score2").fadeIn();
     $(this).removeClass('imagesShow').addClass('not-clickable');
   });
-// });
-
-// $(document).ready(function() {
-    var f = document.getElementById('rare');
-    setInterval(function() {
-        if($('#rare').length > 0)
-        f.style.display = (f.style.display == 'none' ? '' : 'none');
-    }, 500);
 
 
+
+blinkFont();
 });
+
+function blinkFont()
+{
+document.getElementById("blink").style.color="red"
+document.getElementById("blink").style.background="#232928"
+setTimeout("setblinkFont()",500)
+}
+
+function setblinkFont()
+{
+document.getElementById("blink").style.color="#232928"
+// document.getElementById("blink").style.background="red"
+setTimeout("blinkFont()",500)
+}

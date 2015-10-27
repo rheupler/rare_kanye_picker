@@ -98,8 +98,18 @@ table, th, td {
   display: inline-block;
 }
 
-#rare {
-  color: red;
+#blink {
+text-align:center;
+background-color: #232928;
+color:#F00;
+margin: 0;
+padding:20px;
+}
+
+#blink span {
+font-size:2em;
+font-weight:bold;
+display:block;
 }
 
 #welcome {
@@ -137,9 +147,9 @@ button.big:active {
 
 button.small {
   background-color: #232928;
-  border: 2px solid white;
+  border: 2px solid #FFFF00;
   padding: 10px;
-  color: white;
+  color: #FFFF00;
   font-family: 'Press Start 2P', cursive;
   font-size: 1.3em;
   box-shadow: 3px 3px;
@@ -199,13 +209,15 @@ input {
 }
 
 .ranking4 {
-  color: blue;
+  color: #2ECCFA;
 }
 
 .ranking5 {
-  color: purple;
+  color: #FE2EF7;
 }
-
+.new-game-button {
+  padding: 30px;
+}
 .playerScore {
   color: red;
 }
