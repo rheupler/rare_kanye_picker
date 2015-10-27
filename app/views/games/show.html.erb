@@ -8,8 +8,8 @@
 <% else %>
   <div class="gameplay">
 <div class="buttons">
-  <button class="small">INSTRUCTIONS</button>
-  <button class="small">PEPE GUIDE</button>
+  <button class="small" data-toggle="modal" data-target="#myModal">INSTRUCTIONS</button>
+  <button class="small" id="pepeGuide" data-toggle="modal" data-target="#myModal2">PEPE GUIDE</button>
 </div>
   <h1>UNCOVER THE RAREST PEPE</h1>
 
@@ -27,14 +27,14 @@
     <h2><%= @image1.value %></h2>
   </div>
 
-  <%= link_to game_path(@game, score: @image1.value, turn: 1), {method: :patch} do %>
+  <%= link_to game_path(@game, image_id: @image1.id, score: @image1.value, turn: 1), {method: :patch} do %>
   <div class='imagesShow'>
     <div class='imgOverlay1'>
       <img id="black1" src="/assets/black/<%= rand(9) %>.png">
     </div>
     <% end %>
 
-  <%= link_to game_path(@game, score: @image2.value, turn: 1), {method: :patch} do %>
+  <%= link_to game_path(@game, image_id: @image2.id, score: @image2.value, turn: 1), {method: :patch} do %>
     <div class='imgOverlay2'>
       <img id='black2' src="/assets/black/<%= rand(9) %>.png">
     </div>
@@ -54,3 +54,63 @@
   <h1 id="rare">Rare Pepe Detected!</h1>
   <% end %>
 <% end %>
+
+
+<% if @game.images.any? %>
+<h2>Collection:</h2>
+<% @game.images.each do |image| %>
+<div class="image-card">
+  <img src="/assets/Pepe/pepe<%= image.id %>.jpg">
+</div>
+<% end %>
+<% end %>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">How to play</h3>
+      </div>
+      <div class="modal-body">
+        <h4>You will be given two pictures of Pepes that are covered up.</h4><br>
+        <h4>Get the most points possible within twenty turns by selecting different Pepes.</h4><br>
+        <h4>Each Pepe has a value according to how
+        rare it is.</h4><br><br>
+        <h4>Hint: You can see the full list of Pepe's with their value by clicking on the Pepe Guide button on the top
+        right of this page.</h4>
+        <h4>NOTE: You will only be able to click the button FIVE times before it disappears, so use it wisely!</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">You'll only be able to see this once. Take it all in. Click the button at the bottom
+        when you're ready to play.</h4>
+      </div>
+      <div class="modal-body">
+        <% @images.each do |image| %>
+          <div class="modal-card">
+            <img src='/assets/Pepe/pepe<%= image.id %>.jpg'>
+            <p>Value: <%= image.value %><p>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Ready to play</button>
+      </div>
+    </div>
+  </div>
+</div>

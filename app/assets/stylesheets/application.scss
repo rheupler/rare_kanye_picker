@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 body {
   background-color: #232928;
   color: white;
@@ -24,6 +25,11 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -40,7 +46,7 @@ img {
 }
 table, th, td {
   text-align: center;
-  border: 3px solid white;
+  // border: 3px solid white;
   padding: 30px;
   font-size: .8em;
 }
@@ -48,8 +54,8 @@ table, th, td {
 .imgOverlay1 {
   width: 160px;
   height: 160px;
-  border: 3px solid white;
-  box-shadow: 5px 10px;
+  // border: 3px solid white;
+  box-shadow: 5px 8px;
   margin-bottom: 5px;
   margin-right: 5px;
   display: inline-block;
@@ -67,8 +73,8 @@ table, th, td {
 .imgOverlay2 {
   width: 160px;
   height: 160px;
-  border: 3px solid white;
-  box-shadow: 5px 10px;
+  // border: 3px solid white;
+  box-shadow: 5px 8px;
   margin-bottom: 5px;
   margin-right: 5px;
   display: inline-block;
@@ -178,4 +184,50 @@ input {
 .game-over {
   color: red;
   font-size: 3em;
+}
+
+.ranking1 {
+  color: orange;
+}
+
+.ranking2 {
+  color: yellow;
+}
+
+.ranking3 {
+  color: green;
+}
+
+.ranking4 {
+  color: blue;
+}
+
+.ranking5 {
+  color: purple;
+}
+
+.playerScore {
+  color: red;
+}
+
+#myModal, #myModal2 {
+  color: white;
+  position: absolute;
+  overflow: scroll;
+}
+
+.modal-body {
+  background-color: #232928;
+}
+
+.modal-card {
+  display: inline-block;
+}
+
+// #pepeGuide {
+//   display: none;
+// }
+
+#myModalLabel {
+  color: black;
 }
