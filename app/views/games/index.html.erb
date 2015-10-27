@@ -5,33 +5,20 @@
 <button type="submit" class="big">NEW GAME</button>
 <% end %>
 
-<h1>LEADERBOARD</h1>
-<!-- <div class="leaderboard">
-  <ul>
-    <li>Name</li>
-    <li>Turns</li>
-  </ul>
-  <ol><% @games.each do |game| %>
-    <% if game.score >= 100 %>
-    <li><%= game.player %> <%= game.turns %></li>
-  <% end %>
-  <% end %>
-  </ol>
-
-</div> -->
-
-
-<table class="leaderboard">
-  <tr>
-    <th>Player</th>
-    <th>Score</th>
-  </tr>
-  <% @games.each do |game| %>
-  <% if game.turns >= 20 %>
-  <tr>
-    <td><%= game.player %></td>
-    <td><%= game.score %></td>
-  </tr>
-  <% end %>
+<div class="leaderboard-container">
+  <h1>LEADERBOARD</h1>
+  <table class="leaderboard">
+    <tr>
+      <th>PLAYER</th>
+      <th>SCORE</th>
+    </tr>
+    <% @games.each do |game| %>
+    <% if game.turns >= 20 %>
+    <tr>
+      <td><%= game.player %></td>
+      <td><%= game.score %></td>
+    </tr>
     <% end %>
-</table>
+      <% end %>
+  </table>
+</div>

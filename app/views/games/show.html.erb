@@ -1,16 +1,16 @@
 <center>
-<div class="buttons">
-  <button class="small">INSTRUCTIONS</button>
-  <button class="small">PEPE GUIDE</button>
-</div>
   <% if @game.turns >= 20 %>
     <div "gameover">
-    <h1>Game over</h1>
-    <h2>Your Score: <%= @game.score %></h2>
+    <h1 class="game-over">GAME OVER</h1>
+    <h1>Your Score: <%= @game.score %></h2>
     <%= render 'form' %>
     </div>
 <% else %>
   <div class="gameplay">
+<div class="buttons">
+  <button class="small">INSTRUCTIONS</button>
+  <button class="small">PEPE GUIDE</button>
+</div>
   <h1>UNCOVER THE RAREST PEPE</h1>
 
     <style media="screen">
@@ -46,8 +46,8 @@
   </div>
 
 
-  <h1>Score: <%= @game.score %></h1>
-  <h1>Turn: <%= @game.turns + 1 %></h1>
+  <h1>SCORE: <%= @game.score %></h1>
+  <h1>TURN: <%= @game.turns + 1 %>/20</h1>
 
 <br>
   <% if @image1.value >= 10 || @image2.value >= 10 %>

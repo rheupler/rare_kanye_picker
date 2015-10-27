@@ -1,5 +1,7 @@
-<%= form_for @game do |f| %>
-  <%= f.label "Type your initials" %>
-  <%= f.text_field :player %>
-  <button type="submit">Submit</button>
-<% end %>
+<div class="form-style">
+  <%= form_for @game do |f| %>
+    <%= f.label "Type your initials:" %>
+    <%= f.text_field :player %>
+    <p><button class="small" type="submit">Submit</button></p>
+  <% end %>
+</div>
