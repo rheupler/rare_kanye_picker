@@ -50,4 +50,9 @@
 
   <h1>Score: <%= @game.score %></h1>
   <h1>Turn: <%= @game.turns + 1 %></h1>
+
+<br>
+  <% if @image1.value >= 10 || @image2.value >= 10 %>
+  <h1 id="rare">Rare Pepe Detected!</h1>
+  <% end %>
 <% end %>

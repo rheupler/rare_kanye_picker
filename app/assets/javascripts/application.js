@@ -29,7 +29,14 @@ $(function() {
     $(this).removeClass('imagesShow').addClass('not-clickable');
   });
 });
-// 
+
+$(document).ready(function() {
+    var f = document.getElementById('rare');
+    setInterval(function() {
+        f.style.display = (f.style.display == 'none' ? '' : 'none');
+    }, 500);
+});
+//
 // $('.imagesShow').click(function() {
 //   $(this).removeClass('imagesShow').addClass('not-clickable');
 // });
