@@ -172,6 +172,7 @@ DEPENDENCIES
   pry
   rails (= 4.2.4)
   rails_12factor
+  rake (~> 10.4.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
@@ -180,4 +181,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.5
+   1.11.2
