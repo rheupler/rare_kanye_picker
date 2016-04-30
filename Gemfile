@@ -23,6 +23,10 @@ gem 'hirb'
 gem 'pry'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'rake', '~> 10.4.2'
+gem 'sidekiq'
+gem 'redis'
+gem 'letter_opener'
+gem 'launchy'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
