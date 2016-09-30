@@ -1,7 +1,7 @@
-# Pepepicker.herokuapp.com
-###### Game where you find the rarest pepe
+Pepepicker.herokuapp.com
+Game where you find the rarest pepe
 
-## Installation
+Installation
 1. Clone repo locally
 2. `cd` into new directory
 3. `bundle` to install dependencies
@@ -10,7 +10,7 @@
 Email rheupler@gmail.com for any questions or concerns.
 
 
-## Legal
+Legal
 
 This software is licensed under the MIT license.
 
