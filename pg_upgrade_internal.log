@@ -1,0 +1,14 @@
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Dec  5 15:53:17 2017
+-----------------------------------------------------------------
+
+You must identify the directory where the old cluster binaries reside.
+Please use the -b command-line option or the PGBINOLD environment variable.
+
+-----------------------------------------------------------------
+  pg_upgrade run on Tue Dec  5 16:54:21 2017
+-----------------------------------------------------------------
+
+You must identify the directory where the new cluster data resides.
+Please use the -D command-line option or the PGDATANEW environment variable.
