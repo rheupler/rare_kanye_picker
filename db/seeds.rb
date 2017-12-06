@@ -8,7 +8,7 @@
 
 Image.create([
   {value: 5, id: 1},
-  {value: 2, id: 2},
+  {value: 10, id: 2},
   {value: 3, id: 3},
   {value: 1, id: 4},
   {value: 4, id: 5},
@@ -70,7 +70,7 @@ Image.create([
   {value: 4, id: 61},
   {value: 5, id: 62},
   {value: 9, id: 63},
-  {value: 3, id: 64},
+  {value: 8, id: 64},
   {value: 6, id: 65},
   {value: 2, id: 66},
   {value: 4, id: 67},
