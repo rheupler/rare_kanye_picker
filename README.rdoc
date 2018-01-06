@@ -1,5 +1,5 @@
-Pepepicker.herokuapp.com
-Game where you find the rarest pepe
+rarekanyes.herokuapp.com
+Game where you find the rarest Kanye
 
 Installation
 1. Clone repo locally
