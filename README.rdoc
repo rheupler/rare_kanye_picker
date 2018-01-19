@@ -1,5 +1,4 @@
-[Live demo](https://rarekanyes.herokuapp.com)
-[Live demo](https://rarekanyes.herokuapp.com)
+https://rarekanyes.herokuapp.com
 
 Game where you find the rarest Kanye
 
