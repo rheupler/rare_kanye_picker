@@ -1,4 +1,5 @@
-rarekanyes.herokuapp.com
+[Live demo](rarekanyes.herokuapp.com)
+
 Game where you find the rarest Kanye
 
 Installation
